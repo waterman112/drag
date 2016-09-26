@@ -1,0 +1,20 @@
+
+<h1>This is articles 'new' page</h1>
+
+<%= form_for :article do |f| %>
+<p>
+<%= f.label :title %>
+<%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+
+
+<%= link_to '跳转到编辑页面', edit_article_path(1) %>
