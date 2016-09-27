@@ -1,0 +1,16 @@
+
+<h1>
+  this is 'edit' page
+</h1>
+
+<%= form_for :book,url:book_path(@book),method: :patch do |f| %>
+  <p>
+  <%= f.text_field :Name %><br>
+  <%= f.text_field :Author %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back',books_path %>

@@ -1,0 +1,54 @@
+<h1>
+  this is 'index' page
+</h1>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+  </tr>
+
+  <% @books.each do |book| %>
+    <tr>
+      <td>
+        <%= book.Name %>
+      </td>
+      <td>
+        <%= book.Author %>
+      </td>
+      <td>
+        <%= link_to 'show', book_path(book) %>
+      </td>
+      <td>
+        <%= link_to 'edit',edit_book_path(book) %>
+      </td>
+      <td>
+        <%= link_to 'new book',new_book_path(book) %>
+      </td>
+      <td>
+        <%= link_to 'destroy',book_path(book),method: :delete,data:{confirm:'Are you sure'} %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

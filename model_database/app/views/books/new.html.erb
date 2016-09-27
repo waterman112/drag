@@ -1,0 +1,18 @@
+
+<h1>
+   this is 'new' page
+</h1>
+
+<%= form_for :book ,url: books_path  do |f| %>
+  <p>
+  BookName:<br>
+<%= f.text_field :Name %><br>
+BookAuthor:<br>
+    <%= f.text_field :Author %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
