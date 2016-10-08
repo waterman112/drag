@@ -1,0 +1,29 @@
+
+<h1>
+  this is New Page
+</h1>
+
+<%= form_for @article do |f| %>
+
+  <p> title: <%= f.text_field :content %></p>
+  <!--  <%= text_field :article, :content %> -->
+  <!-- title2:  <%= text_field_tag 'article[title]', '' %> -->
+  <p> text-area:
+  <%= f.text_area :content %></p>
+  <p>password_field:
+  <%= f.password_field :content %></p>
+  <p>hidden_field:
+  <%= f.hidden_field :content %></p>
+  <p>radio_button:
+     <%= f.radio_button :content, 'ok' %>
+  </p>
+
+<%= select_tag "color",options_from_collection_for_select(@color,"id","value") %>
+
+  <p>
+  submit:
+  <%= f.submit "OK"%>
+  </p>
+  <!--  <%= submit_tag "OK" %> -->
+<% end %>
+

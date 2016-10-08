@@ -1,0 +1,31 @@
+<style>
+th{
+ border:1px solid red;
+}
+</style>
+<h1> this is Index Page</h1>
+<table>
+  <tr>
+    <th>
+      BookName
+    </th>
+    <th>
+      Publisher
+    </th>
+  </tr>
+
+  <!--
+
+   something.kind_of?(Object)
+  -->
+
+  <% @books.each do |book| %>
+    <tr>
+      <th><%= book.name %></th>
+      <th><%= Publisher.where(' id  =?',book.publisher_id)[0]%></th>
+      <th><%= link_to 'Edit',edit_book_path(book) %></th>
+      <th><%= link_to 'Delete',book_path(book),method: :delete %></th>
+    </tr>
+<% end %>
+
+</table>

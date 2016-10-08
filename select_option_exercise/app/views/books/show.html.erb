@@ -1,0 +1,64 @@
+<style>
+ td{
+  border:1px solid red;
+ }
+</style>
+
+<h1>this is Show Page</h1>
+
+<!--
+
+<table>
+  <tr>
+    <td>书名：</td>
+    <td>出版社：</td>
+    <td>Edit:</td>
+    <td>Delete:</td>
+  </tr>
+
+  <tr>
+    <td>
+      <%= @book.name %>
+    </td>
+    <td>
+      <%= @publisher.name %>
+    </td>
+    <td>
+      <%= link_to 'edit',edit_book_path(@book)%>
+    </td>
+    <td>
+      <%= link_to 'delete',book_path(@book),method: :delete %>
+    </td>
+  </tr>
+</table>
+
+-->
+
+<p>
+<strong>书名：</strong>
+<%= @book.name %>
+</p>
+
+<p>
+<strong>出版社：</strong>
+<%= @publisher.name %>
+</p>
+
+<%= link_to 'Back',books_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
